@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<title>旅游大奖</title>
+<!-- 内容类型 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 屏幕的缩放 -->
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi = medium-dpi">
+<!-- 忽略页面中的数字识别为电话号码 -->
+<meta name="format-detection" content="telephone=no">                      
+<!-- 首页页面样式 -->
+<link rel="stylesheet" type="text/css" href="css/base-min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+<!-- <script type="text/javascript" src="js/weixin.js"></script> -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src='js/jquery.eraser.js' type='text/javascript'></script>
+
+<style></style>
+
+</head>
+<body>
+  <div class="mainBox">
+    <div class="tourism">
+      <div class="tourism Tsologan">
+        <img src="images/tourismAward_02.png" alt="">
+      </div>
+      <div class="tourismBox">
+        <div class="guagua">
+          <div class="container"> 
+            <img src="images/front.png" id="front" >                 <!-- 刮刮卡遮罩层 -->
+            <img src="images/guaguaBackground.png" id="back" >      <!-- 刮刮卡底层 -->
+          </div>
+          <div class="l1" style="display:none">恭喜您，中奖啦~</div>
+          <div class="l2" style="display:none">获得马尔代夫7日游大奖</div>
+          <div class="l3" style="display:none">很遗憾，未中奖~</div>
+          <div class="Bt" id="getNowBt">立即领取</div>
+          <div class="l4">刮马尔代夫7日游大奖</div>
+          <div class="Bt" id="guaguaBt">点我刮奖</div>
+        </div>
+        <div class="tourismTips">活动规则&nbsp;<i class="icon" id="icon6"></i></div>
+      </div>
+      <!-- 底部盒子 -->
+      <div class="box" id="boxBottom">
+        <div class="l4">您还可参与的抽奖</div>
+        <img src="images/award1.png" alt="" class="leftImg">
+        <span></span>
+        <img src="images/award2.png" alt="" class="rightImg" style="display:none">
+       
+      </div>
+    </div>
+  </div>
+  <script type = "text/javascript">
+    // addEventListener( "load", init, false );  //false时为冒泡获取(由里向外)，true为capture方式(由外向里)。
+    $(function(){
+      //点击“点我刮奖”按钮后隐藏上层文字与按钮，并载入刮卡方法。
+      $('#guaguaBt').on("click",function(){
+        $(this).css("display","none");
+        $('.guagua .l4').css("display","none");
+        //需要设一个延时，否则点击按钮时会同时抹掉后面背景
+        window.setTimeout(function(){
+          function init( event ) {
+            $("#front").eraser();
+          }
+          //完成百分比时执行的方法
+          $("#front").eraser({
+            completeRatio: .7,completeFunction: function(){
+              //如果中奖浮现按钮
+              $("#getNowBt,.l1,.l2").css("z-index",5);}
+          });
+          //取消事件的默认动作
+          function remove(event) {
+            $("#front").eraser('clear');
+            event.preventDefault();       
+          }
+
+          function reset(event) {
+            $("#front").eraser('reset');
+            event.preventDefault();
+          }
+          //修改橡皮擦直径
+          function grow(event) {
+            $("#front").eraser("size",50);   
+            event.preventDefault();
+          }
+
+          var isWin = false;
+          if(isWin == true){
+            //显示中奖文字与“立即领取”按钮
+            $('#getNowBt,.l1,.l2').css("display","block");
+            $('#getNowBt').on("click",function(){
+              //若没填写过信息，则转跳信息填写页面
+              var hasInput = false;
+                if(hasInput==false){
+                 window.location.href="profile.html";
+                }else{
+
+                }   
+            })
+          }else{
+            $('.l3').css("display","block");
+          }
+          
+        },100);   
+      })   
+    })
+    
+  </script>
+</body>
+</html>

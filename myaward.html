@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<title>我的奖品</title>
+<!-- 内容类型 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 屏幕的缩放 -->
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi = medium-dpi">
+<!-- 忽略页面中的数字识别为电话号码 -->
+<meta name="format-detection" content="telephone=no">                      
+<!-- 首页页面样式 -->
+<link rel="stylesheet" type="text/css" href="css/base-min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/weixin.js"></script>
+ -->
+<style></style>
+
+</head>
+<body>
+  <div class="mainBox" >
+    <div class="myAward">
+      <!-- 顶部文字 -->
+      <div class="tel">服务热线：400-8888-8888</div>
+      <!-- 盒子1 -->
+      <div class="box awShowBox">
+        <div class="awardBox">
+          <i id="icon8"></i>
+          <div class="awDesc"><h2>恭喜您获得<span>XXX</span></h2>
+            <p>源：十周年用户专用抽奖&nbsp;<span class="time">2016-08-06&nbsp;15:32</span></p>
+          </div>
+        </div>
+
+        <!-- “立即领取”按钮 -->
+        <div class="Bt" id="getNowBt">立即领取</div>
+        <div class="l3">限<span>8月20日</span>之前领取</div>
+      </div>  
+        <!-- 盒子2 -->
+      <div class="box awShowBox">
+        <div class="awardBox box_2">
+          <i class="icon" id="icon8"></i>
+          <div class="awDesc"><h2>恭喜您获得<span>XXX</span></h2>
+            <p>源：新下载用户专用抽奖&nbsp;<span class="time">2016-08-06&nbsp;15:32</span></p>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="l4">慕容霜&nbsp;&nbsp;159****6621</div>
+        <div class="l5">广东省深圳市福田区中国凤凰大厦1栋25层，某某某公司</div>
+      </div>
+      <!-- 底部盒子 -->
+      <div class="box" id="boxBottom">
+        <div class="l4">您还可参与的抽奖</div>
+        <img src="images/award1.png" alt="" class="leftImg">
+        <span></span>
+        <img src="images/award5.png" alt="" class="rightImg" >
+      </div>
+    </div>
+  </div>
+  <script type = "text/javascript">
+
+    $(function(){
+      $('#getNowBt').on("click",function(){
+        var hasInput;
+        /*——————测试用——————*/
+        /*——————↓↓↓↓↓↓——————*/
+        function firm(){
+          if(confirm("已填写信息？")){
+            hasInput = true;
+          }
+          else{
+            hasInput = false;
+          }
+        }         
+        firm()
+        /*——————↑↑↑↑↑↑——————*/
+        /*——————测试用——————*/
+
+        //“立即领取”按钮
+        //若没填写过信息，则转跳信息填写页面。否则转跳领取成功页面
+        if(hasInput==false){
+          window.location.href="profile.html";
+        }else{
+          window.location.href="awresult.html";
+        }
+        
+      })
+     
+    })
+  </script>
+</body>
+</html>

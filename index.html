@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<title>幸运大抽奖</title>
+<!-- 内容类型 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 屏幕的缩放 -->
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi = medium-dpi">
+<!-- 忽略页面中的数字识别为电话号码 -->
+<meta name="format-detection" content="telephone=no">                      
+<!-- 首页页面样式 -->
+<link rel="stylesheet" type="text/css" href="css/base-min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/weixin.js"></script> -->
+
+<style></style>
+
+</head>
+<body>
+  <div class="mainBox" >
+    <div class="mainPage">
+      <div class="Tsologan">
+        <img src="images/title.png" alt="">
+      </div>
+      <div class="Bt" id="awardBt">查看我的奖品&nbsp;<i class="icon" id="icon5"></i></div>
+      <div class="background_part"><img src="images/background_part.png" alt=""></div>
+      <div class="content">
+      <ul>
+        <li>
+          <div class="mbox boxTop"> 
+            <div class="inBox">
+              <img src="images/award1.png">
+              <div class="ininBox">
+                <div class="Bt getAwardBt">马上抽奖&nbsp;<i class="icon" id="icon5"></i>
+              </div>
+                <div class="moreAward"><a href="newuser.html">查看更多奖品</a></div></div> 
+            </div> 
+            <div class="line"></div>
+            <div class="tips">
+              <span>活动规则&nbsp;<i class="icon" id="icon6"></i></span>
+              <p>限活动开始前关注微信平台的用户领取！</p>
+            </div>
+          </div>    
+        </li>
+        <li>
+          <div class="mbox"> 
+            <div class="inBox">
+              <img src="images/award2.png">
+              <div class="ininBox">
+                <div class="Bt getAwardBt">马上抽奖&nbsp;<i class="icon" id="icon5"></i></div>
+                <div class="moreAward"><a href="newwxuser.html">查看更多奖品</a></div>
+              </div> 
+            </div> 
+            <div class="line"></div>
+            <div class="tips">
+              <span>活动规则&nbsp;<i class="icon" id="icon6"></i></span>
+              <p>限活动开始之后关注微信平台的用户领取！</p>
+            </div>
+         </div>   
+        </li>
+        <li>
+          <div class="mbox"> 
+            <div class="inBox">
+              <img src="images/award3.png">
+              <div class="ininBox">
+                <div class="Bt getAwardBt">马上抽奖&nbsp;<i class="icon" id="icon5"></i></div>
+                <div class="moreAward"><a href="newuser.html">查看更多奖品</a></div>
+              </div> 
+            </div> 
+            <div class="line"></div>
+            <div class="tips">
+            </p><span>活动规则&nbsp;<i class="icon" id="icon6"></i></span><p>限活动开始之后绑定资金账户的用户领取！(已绑定或取消再绑定无效)
+            </div>
+          </div>          
+        </li>
+        <li>
+          <div class="mbox"> 
+            <div class="inBox">
+              <img src="images/award4.png">
+              <div class="ininBox">
+                <div class="Bt getAwardBt">马上抽奖&nbsp;<i class="icon" id="icon5"></i></div>
+                <div class="moreAward"><a href="olduser.html">查看更多奖品</a></div>
+              </div> 
+            </div> 
+            <div class="line"></div>
+            <div class="tips">
+              <span>活动规则&nbsp;<i class="icon" id="icon6"></i></span>
+              <p>限安信开户10周年及以上用户领取！</p>
+            </div>
+          </div>          
+        </li>
+        <li>
+          <div class="mbox"> 
+            <div class="inBox">
+              <img src="images/award5.png">
+              <div class="ininBox">
+                <div class="Bt getAwardBt">马上抽奖&nbsp;<i class="icon" id="icon5"></i></div>
+                <div class="moreAward">马尔代夫7日游</div>
+              </div> 
+            </div> 
+            <div class="line"></div>
+            <div class="tips">
+              <span>活动规则&nbsp;<i class="icon" id="icon6"></i></span>
+              <p>限安信用户领取！</p>
+            </div>
+          </div>          
+        </li>
+      </ul>
+      <div class="footer">注：本活动最终解释权归安信证券所有</div>
+    </div>
+  </div>
+    
+  </div>
+  <script type = "text/javascript">
+  $(function(){
+    //“查看我的奖品”按钮的转跳
+    $("#awardBt").on("click",function(){
+      window.location.href="myaward.html";
+    });
+    //3个“马上抽奖”按钮的转跳
+    $(".getAwardBt").eq(0).on("click",function(){
+      window.location.href="lunpan.html";
+    });
+    $(".getAwardBt").eq(1).on("click",function(){
+      window.location.href="lunpanwxnew.html";
+    });
+    $(".getAwardBt").eq(2).on("click",function(){
+      window.location.href="lunpan.html";
+    });
+    $(".getAwardBt").eq(3).on("click",function(){
+      window.location.href="lunpanold.html";
+    });
+    $(".getAwardBt").eq(4).on("click",function(){
+      window.location.href="tourism.html";
+    });
+  });   
+  </script>
+</body>
+</html>

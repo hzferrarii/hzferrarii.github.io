@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<title>领奖结果</title>
+<!-- 内容类型 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 屏幕的缩放 -->
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi = medium-dpi">
+<!-- 忽略页面中的数字识别为电话号码 -->
+<meta name="format-detection" content="telephone=no">                      
+<!-- 首页页面样式 -->
+<link rel="stylesheet" type="text/css" href="css/base-min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/weixin.js"></script> -->
+
+<style></style>
+
+</head>
+<body>
+  <div class="mainBox" >
+    <div class="result">
+      <div class="box awShowBox">
+        <div class="awardBox">
+          <i id="icon9"></i>
+          <div class="awDesc"><h2>恭喜您！领奖成功</h2>
+            <p>您已成功领取<span>XXX</span></p>
+          </div>
+        </div>
+        <div class="BtContainer">
+          <div class="Bt" id="leftBt">返回首页</div>
+          <div class="Bt" id="rightBt">查看奖品</div>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <!-- 底部盒子 -->
+      <div class="box" id="boxBottom">
+        <div class="l4">您还可参与的抽奖</div>
+        <img src="images/award1.png" alt="" class="leftImg">
+        <span></span>
+        <img src="images/award5.png" alt="" class="rightImg" >
+        
+      </div>
+    </div>
+  </div>
+  <script type = "text/javascript">
+    $(function(){
+      $('#leftBt').on("click",function(){
+        window.location.href="index.html";
+      })
+      $('#rightBt').on("click",function(){
+        window.location.href="myaward.html";
+      })
+    })
+  </script>
+</body>
+</html>

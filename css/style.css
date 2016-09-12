@@ -1,0 +1,515 @@
+/*幸运大抽奖*/
+body {
+    font-size: 14px;
+    line-height: 1.5;
+    background: #F0F0F0;
+}
+img {
+    padding: 0;
+    margin: 0;
+}
+/*最外框*/
+.mainBox {
+    position: relative;
+    background-color: #F0F0F0;
+    background-size: 100% auto;
+}
+.mainBox .price{ z-index: -1; }
+/*图标*/
+.icon{
+	position: absolute;
+	background: url(../images/icons.png) no-repeat;
+	background-size: 185px auto;
+	width: 33px;height: 33px;
+}
+#icon1{background-position:-4px -8px;}
+#icon2{background-position:-50px -8px;}
+#icon3{background-position:-95px -8px;}
+#icon4{background-position:-142px -8px;}
+#icon5{background-position:-4px -64px;width: 16px;height: 16px;}
+#icon6{background-position:-27px -63px;width: 17px;height: 17px;}
+#icon7{background-position:-4px -88px;width: 19px;height: 19px;}
+#icon9{background-position:-117px -52px;width: 63px;height: 63px;}
+#icon10{background-position:-27px -88px;width: 17px;height: 17px;}
+/*按钮样式*/
+.Bt{
+	margin: 0 auto;
+	padding: 10px;
+	background: #FFB700;
+	border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0 3px 0 #CF7000;
+    -webkit-box-shadow: 0 3px 0 #CF7000;
+    font-size: 15px;
+    /*line-height: 1.2;*/
+    letter-spacing: 1px;
+    text-align: center;
+    color: #FFF;
+}
+/*立即领取按钮*/
+#getNowBt{
+	position: relative;
+    width: 45%;
+    margin-top:5px;
+    background: #FC472C;
+    box-shadow: 0 3px 0 #EA3E24; 
+    -webkit-box-shadow: 0 3px 0 #EA3E24;
+}
+/*查看我的奖品按钮*/
+#awardBt{
+	background: #FC472C;
+    border-radius: 20px;
+    -webkit-border-radius: 20px ;
+    box-shadow: 0 2px 0 #D43219;
+    -webkit-box-shadow: 0 2px 0 #D43219;
+    width: 45%;
+	margin-bottom: 25px;
+}
+#awardBt i{margin-top:3px;}
+.getAwardBt i{margin-top:3px;}
+
+/*————————***————————主页————————***————————*/
+.mainPage{
+	background:#FEE9DD;
+	padding-top:22px; 
+}
+.Tsologan {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.Tsologan img{
+    width: 100%;
+}
+/*主页：下方抽奖部分*/
+.background_part{
+	height: 18px;
+}
+.background_part img{
+	width:100%;
+	height: auto;
+}
+.content{
+	width: 100%;
+	padding:3%;
+	padding-top:5px; 
+	background-color: #EA3E24;
+	color:#FFF;
+	/*border-radius: 80% 80% 0 0 / 2% 2% 0 0;
+	-webkit-border-radius: 80% 80% 0 0 / 2% 2% 0 0;
+	box-shadow: 0 1px 3px #E8E8E8 inset;*/
+}
+.content li:nth-child(5) img{
+	padding-top:10px;
+}
+.mbox{
+	width: 100%;
+	margin-bottom: 15px;
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: #EC5038;
+}
+.boxTop{
+	margin-top: 7px;
+}
+.inBox{
+	margin-top: 0;
+	width: 100%;
+}
+.mbox img{
+	float: left;
+	width:55%;
+	height:auto; 	
+	display: block;
+}
+.ininBox{
+	padding-top: 20%;
+	margin-bottom:12%;
+}
+/*“马上抽奖”按钮*/
+.Bt.getAwardBt{
+	margin-left:60%; 
+	padding:8px;
+	width: 35%;
+}
+/* “查看更多奖品”链接 */
+.moreAward{
+	width: 35%;
+	margin-top: 4%;
+	margin-left:60%; 
+	max-width: 200px;
+	font-size: 11px;
+	line-height: 1.2;
+    text-align: center;
+}
+a:link{
+	color:#FFF;
+	text-decoration:underline;
+}
+a:hover{
+	color:#FFB700;
+	text-decoration:underline;
+}
+a:visited{
+	color:#FFF;
+	text-decoration:underline;
+}
+/*分割线*/
+.line{
+	clear: both;
+	border-bottom: 1px solid rgba(255,255,255,0.4);
+	width:95%;
+	margin: 0 auto;
+	/*margin-top:10px;*/
+}
+/*分割线下方文字*/
+.tips{
+	margin: 5px;
+	margin-left: 3%;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+.tips span{
+	float: right;
+	margin-right: 6%;
+}
+.tips p{
+	margin-right:30%;
+}
+.footer{
+	color:#FFF;
+	text-align:right;
+	font-size: 10px;
+}
+
+/*————————***————————摇奖奖品页面————————***————————*/
+.price li{
+	background: #FFF;
+	position: relative;
+	height: 60px;
+	border-bottom: 1px solid #DCDCDC;
+}
+.price li.top{
+	margin-top:10px;
+	border-top:1px solid #DCDCDC;
+}
+.price .icon{
+	top: 23%;
+	left: 3.5%;	
+}
+/*摇奖页面：图标后的文字*/
+.rank{
+	font-weight: 500;
+	letter-spacing: 1px;
+	position: absolute;
+	font-size: 16px;
+	top: 23%;
+	left: 17%;
+}
+.nums{
+	color:#AEAEAE;
+	position: absolute;
+	font-size: 13px;
+	top: 58%;
+	left: 17%;
+}
+/*奖品详细描述：垂直居中*/
+.award{
+	color:#666666;
+	position: absolute;
+	font-size: 13px;
+	top: 0%;
+	left: 37%;
+	width: 58%;
+	height: 60px;
+	line-height: 1.2;
+	vertical-align: middle;
+	display:table;
+}
+.price p{
+	vertical-align: middle;
+	display:table-cell;
+	height: 60px;
+}
+/*————————***————————旅游大奖页面————————***————————*/
+.tourism {
+    background: #FEE9DD;
+}
+.tourism.Tsologan {
+    margin-top: 0;
+    padding-top:10px; 
+}
+.tourismBox{
+	position: relative;
+	margin-bottom: 10px;
+    padding:3.5%;
+    height: 200px;
+	background: #F94025;
+	box-shadow:  1px 1px 3px #E8E8E8 inset;
+	-webkit-box-shadow:  0px 1px 1px #E8E8E8 inset;
+}
+/*刮刮卡*/
+.guagua{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    max-height: 80%;
+    padding:1px;
+}
+.container img {width:100%; position:absolute; top:0; left:0; z-index: 3;}
+#front{
+    position: absolute;
+    /*width: 100%;*/
+    top:0;
+    left:0;
+    z-index: 2;
+}
+#back{
+    position: absolute;
+    /*width: 100%;*/
+    top:0;
+    left:0;
+    z-index: 0;
+}
+/*刮刮卡上文字与按钮*/
+.l1{
+    position: relative;
+    width: 100%;
+    top:15%;
+    margin: 0 auto;
+    color: #FC472C;
+    font-size: 17px;
+    /*font-weight: bold;*/
+    letter-spacing: 1px;
+    text-align: center;
+}
+.guagua .l1{
+	margin-top:10px;
+}
+.guagua .l2{
+    position: relative;
+    margin-top:4px;
+    color: #666666;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.guagua .l3{
+    position: relative;	
+    margin-top:50px;
+    color: #000;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.guagua .l4{
+	position:relative;
+	margin-top:25px;
+	color: rgba(0,0,0,0.7);
+	text-align: center;
+	z-index: 5;
+}
+.guagua #getNowBt{
+	display: none;
+}
+/*上层点我刮奖按钮*/
+#guaguaBt{
+	position: relative;
+	width: 45%;
+	margin-top: 10px;
+    background: #FC472C;
+    box-shadow: 0 3px 0 #EA3E24; 
+    -webkit-box-shadow: 0 3px 0 #EA3E24;
+	z-index: 5;
+}
+.tourismTips{
+    position: absolute;
+    width: 100%;
+    bottom: 7px;
+    right: 28px;
+    color: #FFF;
+    font-size: 13px;
+    text-align: right;
+}
+
+/*————————***————————我的奖品与领奖结果页面————————***————————*/
+/*box属性*/
+.box{
+	position: relative;
+	display: block;
+	background: #FFF;
+	width: 100%;
+	border-top: 1px solid rgba(216,216,216,1);
+	border-bottom: 1px solid rgba(220,220,220,1);
+	margin:0 auto;
+	margin-bottom: 20px;
+	padding:10px;
+}
+/*————————***————————我的奖品页面————————***————————*/
+/*顶部文字*/
+.tel{
+	color: #666666;
+	width: 100%;
+	padding: 6px;
+	font-size: 14px;
+	text-align: center;
+}
+/*box文字*/
+.myAward .l3{
+	margin-top:3%;
+	font-size:12px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #FC472C;
+}
+.myAward .l4{
+	margin-top:3%;
+	margin-left: 3%;
+	font-size:13px;
+	text-align: left;
+	letter-spacing: 1px;
+}
+.myAward .l5{
+	margin-left: 3%;
+	font-size:12px;
+	text-align: left;
+	letter-spacing: 0;
+	color:#a8a8a8;
+}
+/*按钮*/
+.myAward #getNowBt{
+	width: 55%;
+    /*padding: 12px;*/
+	margin-top: 20px;
+}
+.awShowBox {background:#fff; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; margin-bottom: 10px;}
+.awardBox .awDesc{ margin-left:50px; }
+.awardBox i {background: url(../images/icons.png) no-repeat; background-size: 185px auto; float:left; width: 41px; height: 41px; display: block;}
+.awardBox i#icon8 {background-position:-59px -63px ; }
+.awDesc h2 {padding-top:4px; font-size:16px; line-height: 1.5; font-weight: normal;}
+.awDesc p {color:#a8a8a8; font-size:12px;}
+.awardBox.box_2{
+	border-bottom: 1px solid rgba(226,226,226,0.5);
+	padding-bottom: 15px;
+}
+#boxBottom{
+	border-top:1px solid rgba(220,220,220,1);
+	overflow: hidden;	/*清除浮动*/
+}
+#boxBottom .l4{
+	margin-top: 0;
+	border-bottom: 1px solid rgba(226,226,226,0.5);
+	padding-bottom: 10px;
+}
+#boxBottom img{
+	float:left;
+	width: 50%;
+	padding:15px;
+}
+#boxBottom span{
+	position: absolute;
+	width: 1px;
+	height: 55%;
+	left: 50%;
+	top:35%;
+	border-right: 1px solid rgba(226,226,226,0.5);
+	display: block;
+}
+
+/*————————***————————领奖结果页面————————***————————*/
+.result .awardBox{
+	width: 95%;
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(226,226,226,0.5);
+	padding-bottom: 30px;
+}
+.awardBox i#icon9{
+	margin-left: 15%;
+	margin-right: 5%;
+}
+.result .awDesc{
+	margin-top: 10px;
+}
+.result .awDesc h2{
+	padding-top: 10px;
+	color: #FC472C;
+}
+.result .awDesc p{
+	color: #000;
+	letter-spacing: 1px;
+	font-size: 13px;
+}
+/*按钮*/
+.BtContainer{
+	width: 100%;
+	padding: 20px;
+	padding-bottom: 60px;
+}	
+#leftBt{
+	float:left;
+	width: 47%;
+	padding: 10px;
+}
+#rightBt{
+	background: #FC472C;
+	box-shadow: 0 3px 0 #D43219;
+	-webkit-box-shadow: 0 3px 0 #D43219;
+	float:right;
+	width: 47%;
+}
+
+/*————————***————————填写信息页面————————***————————*/
+/*：div样式*/
+.mess li{
+	position: relative;
+	padding:10px 15px;
+	color: #000;
+	font-size: 14px;
+	background: #FFF;
+	border-bottom: 1px solid #EDEDED;
+}
+.mess span {width:30%; display: inline-block; margin-right:-3px; font-size:15px;}
+.mess p {width:70%; display: inline-block; margin-right:-3px; text-align: right; position: relative;}
+.mess input{
+	width: 100%;
+	text-align: right;
+}
+.mess b {padding-right:20px; width:33%; display: inline-block; color:#A8A8A8;}
+.mess b:first-child {width:34%;}
+
+.district select{
+	width: 33%;
+	font-size: 13px;
+	color:#000;
+	appearance:none;
+	-webkit-appearance:none;
+	position: absolute;
+	top:0;
+	background:transparent;
+	opacity: 0;
+}
+.district select#s_province {right:66%; width:34%;}
+.district select#s_city {right:33%; }
+.district select#s_county {right:0;}
+.address input{
+	width:70%;
+}
+.name{
+	margin-top: 10px;
+	border-top: 1px solid #DCDCDC;
+}
+li.address {
+	border-bottom: 1px solid #DCDCDC;
+}
+.mess .icon{
+	margin: 2px;
+}
+/*确认信息按钮*/
+#confirmBt{
+    width: 93%;
+    background: #2A92EB;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin-top:30px;
+}
